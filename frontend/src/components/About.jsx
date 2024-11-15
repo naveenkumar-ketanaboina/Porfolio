@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Code, Briefcase, GraduationCap } from 'lucide-react';
+import axios from 'axios';
 
 const About = () => {
-  const skills = [
-    "JavaScript", "React.js", "Node.js", "Python",
-    "TypeScript", "MongoDB", "PostgreSQL", "AWS",
-    "Docker", "Git", "REST APIs", "GraphQL"
-  ];
-
+  const [skills, setSkills] = useState([]);
+  useEffect(() => {
+    // Make sure the URL is pointing to your Django backend
+    axios.get('http://127.0.0.1:8000/info/api/skills/')
+      .then((response) => {
+        setSkills(response.data);
+      })
+      .catch((error) => {
+        console.error('There was an error fetching the skills:', error);
+      });
+  }, []);
   return (
     <section id="about" className="py-20 px-4 bg-gray-900">
       <div className="max-w-5xl mx-auto">
@@ -39,12 +45,12 @@ const About = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-6">My Skills</h3>
             <div className="flex flex-wrap gap-3">
-              {skills.map((skill, index) => (
+              {skills.map((skill) => (
                 <span 
-                  key={index}
+                  key={skill.id}
                   className="px-4 py-2 bg-gray-800 text-blue-400 rounded-full text-sm hover:bg-gray-700 transition-colors"
                 >
-                  {skill}
+                  {skill.name}
                 </span>
               ))}
             </div>
@@ -55,17 +61,17 @@ const About = () => {
           <div className="p-6 bg-gray-800 rounded-xl transform hover:scale-105 transition-all">
             <Code size={40} className="text-blue-400 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Experience</h3>
-            <p className="text-gray-300">3+ years of development experience</p>
+            <p className="text-gray-300">2 years of development experience</p>
           </div>
           <div className="p-6 bg-gray-800 rounded-xl transform hover:scale-105 transition-all">
             <Briefcase size={40} className="text-blue-400 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Projects</h3>
-            <p className="text-gray-300">15+ completed projects</p>
+            <p className="text-gray-300">5+ completed projects</p>
           </div>
           <div className="p-6 bg-gray-800 rounded-xl transform hover:scale-105 transition-all">
             <GraduationCap size={40} className="text-blue-400 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Education</h3>
-            <p className="text-gray-300">B.S. Computer Science</p>
+            <p className="text-gray-300">Master's (Computer Science)</p>
           </div>
         </div>
       </div>

@@ -12,21 +12,21 @@ const Contact = () => {
               <Mail className="text-blue-400" size={24} />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-gray-300">contact@example.com</p>
+                <p className="text-gray-300">naveenkumar.ketenaboina@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="text-blue-400" size={24} />
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <p className="text-gray-300">+1 234 567 890</p>
+                <p className="text-gray-300">+1 640 204 9553</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <MapPin className="text-blue-400" size={24} />
               <div>
                 <h3 className="font-semibold">Location</h3>
-                <p className="text-gray-300">San Francisco, CA</p>
+                <p className="text-gray-300">Cleveland, OH</p>
               </div>
             </div>
           </div>

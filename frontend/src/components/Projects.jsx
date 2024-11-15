@@ -31,17 +31,17 @@ const ProjectCard = ({ title, description, image, tech, demo, github }) => (
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with cart and payment integration",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800",
+      title: "TA Tracker",
+      description: "A comprehensive Talent Acquisition tool designed to streamline the recruitment process, enhance team collaboration, and improve candidate tracking for the TA team.",
+      image: "https://www.shutterstock.com/image-vector/talent-acquisition-process-employers-use-260nw-2194021315.jpg",
       tech: ["React", "Node.js", "MongoDB"],
       demo: "https://demo.com",
       github: "https://github.com"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task manager with real-time updates",
-      image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=800",
+      title: "Versante",
+      description: "An AI-powered bot leveraging image processing tools to assist in the detection of STDs, providing a quick and efficient diagnostic aid.",
+      image: "https://versante.vercel.app/_next/image?url=%2Ffinallogo.png&w=384&q=75",
       tech: ["React", "Firebase", "Tailwind"],
       demo: "https://demo.com",
       github: "https://github.com"
