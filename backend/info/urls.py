@@ -5,10 +5,10 @@ from .views import SkillViewSet, ProjectViewSet, EducationViewSet, ExperienceVie
 
 # Create a router and register our viewsets
 router = DefaultRouter()
-router.register(r'skills', SkillViewSet)
-router.register(r'projects', ProjectViewSet)
-router.register(r'education', EducationViewSet)
-router.register(r'experience', ExperienceViewSet)
+router.register(r'skills', SkillViewSet, basename='skill')
+router.register(r'projects', ProjectViewSet, basename='project')
+router.register(r'education', EducationViewSet, basename='education')
+router.register(r'experience', ExperienceViewSet, basename='experience')
 
 urlpatterns = [
     path('api/', include(router.urls)),  # Include the API URLs

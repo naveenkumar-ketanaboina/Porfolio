@@ -10,7 +10,7 @@ const Hero = () => {
           <h2 className="text-xl md:text-2xl text-blue-400">Hello, I'm</h2>
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-              John Developer
+              Naveen Kumar Ketanaboina
             </span>
           </h1>
           <p className="text-2xl md:text-3xl text-gray-300 font-light">
@@ -29,11 +29,11 @@ const Hero = () => {
                className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/naveen-kumar-ketanaboina-3558a0245/" target="_blank" rel="noopener noreferrer"
                className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:contact@example.com"
+            <a href="mailto:naveenkumar.ketanaboina@gmail.com"
                className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
               <Mail size={24} />
             </a>
